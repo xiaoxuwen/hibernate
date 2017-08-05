@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hust.hibernate</groupId>
+    <artifactId>hibernate</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <!-- 文件拷贝时的编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hibernate.version>4.3.11.Final</hibernate.version>
+    </properties>
+
+
+    <modules>
+        <module>hibernate_0100_helloworld</module>
+        <module>hibernate_0200_OR_Mapping_Simulation</module>
+        <module>hibernate_0300_BasicConfiguration</module>
+        <module>hibernate_0400_CoreAPI</module>
+        <module>hibernate_0500_one2one_uni_fk</module>
+        <module>hibernate_0600_one2one_bi_fk</module>
+        <module>hibernate_0700_one2one_uni_pk</module>
+        <module>hibernate_0800_one2one_bi_pk</module>
+        <module>hibernate_0900_one2one_uni_fk_composite</module>
+        <module>hibernate_1000_component</module>
+        <module>hibernate_1100_many2one_uni</module>
+        <module>hibernate_1200_one2many_uni</module>
+        <module>hibernate_1300_one2many_many2one_bi</module>
+        <module>hibernate_1400_many2many_uni</module>
+        <module>hibernate_1500_many2many_bi</module>
+        <module>hibernate_1600_one2many_many2one_bi_crud</module>
+        <module>hibernate_1800_Collections_Mapping</module>
+        <module>hibernate_1900_Inheritence_Mapping_SingleTable</module>
+        <module>hibernate_2000_Inheritence_Mapping_Table_Per_Class</module>
+        <module>hibernate_2100_Inheritence_Mapping_JOINED</module>
+        <module>hibernate_2200_Tree</module>
+        <module>hibernate_2300_Stu_Course_Score</module>
+        <module>hibernate_2400_QL_1</module>
+        <module>hibernate_2500_1andN</module>
+        <module>hibernate_2600_Hibernate_list_iterator</module>
+        <module>hibernate_2700_3KindsOf_Cahe</module>
+        <module>hibernate_2800_Concurrency_Lock</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-ehcache</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.30</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.0.13</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

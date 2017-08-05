@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+    <class name="com.hust.hibernate.model.Student" table="t_student" dynamic-update="true">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="name"/>
+        <set name="teachers" table="t_s">
+            <key column="student_id"></key>
+            <many-to-many class="com.hust.hibernate.model.Teacher" column="teacher_id"/>
+        </set>
+    </class>
+</hibernate-mapping>
